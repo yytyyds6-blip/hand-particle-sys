@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D 粒子交互</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+    <div id="loader">
+        <div class="spinner"></div>
+        <div id="loader-text">系统初始化中...<br><span style="font-size:12px;color:#888">(请授予摄像头权限)</span></div>
+    </div>
+
+    <div class="status-badge" id="status">等待手势...</div>
+    <video id="video-input" playsinline></video>
+    <div id="canvas-container"></div>
+    <button id="fs-btn">⛶ 全屏模式</button>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/",
+                "@mediapipe/tasks-vision": "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.3/+esm",
+                "lil-gui": "https://cdn.jsdelivr.net/npm/lil-gui@0.19.1/+esm"
+            }
+        }
+    </script>
+
+    <!-- 2. 引用新的 JS 文件 (注意 type="module") -->
+    <script type="module" src="./script.js"></script>
+</body>
+</html>
